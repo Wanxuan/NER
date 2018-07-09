@@ -55,3 +55,8 @@ checkpoint = ModelCheckpoint(filepath, monitor='loss', verbose=1, save_best_only
 callbacks_list = [checkpoint]
 # fit the model
 model.fit(X, y, epochs=50, batch_size=64, callbacks=callbacks_list)
+
+# Save the model
+model.save_weights('best_model.h5')
+with open('best_model.json', 'w') as f:
+        f.write(model.to_json())
