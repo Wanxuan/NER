@@ -8,7 +8,7 @@ from keras.utils import np_utils
 
 # Load ascii text and covert to lowercase
 filename = "Pride_and_Prejudice"
-raw_text = open(filename).read()
+raw_text = open(filename, encoding="uft-8").read()
 raw_text = raw_text.lower()
 
 # Create mapping of unique chars to integers
