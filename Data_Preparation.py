@@ -20,7 +20,7 @@ fileSegWordDonePath ='corpusSegDone.txt'
 with open(fileSegWordDonePath,'wb') as fW:
     for i in range(len(fileTrainSeg)):
         fW.write(fileTrainSeg[i][0].encode('utf-8'))
-        fW.write('\n')
+        fW.write(b'\n')
 
 # 检查jieba断词的结果
 def PrintListChinese(list):
