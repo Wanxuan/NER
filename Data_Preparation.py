@@ -14,7 +14,7 @@ fileTrainSeg=[]
 for i in range(len(fileTrainRead)):
     fileTrainSeg.append([' '.join(list(jieba.cut(fileTrainRead[i][9:-11],cut_all=False)))])
     if i % 50000 == 0 :
-        print i
+        print(i)
 
 # 将jieba的断词产出存档
 fileSegWordDonePath ='corpusSegDone.txt'
@@ -26,7 +26,7 @@ with open(fileSegWordDonePath,'wb') as fW:
 # 检查jieba断词的结果
 def PrintListChinese(list):
     for i in range(len(list)):
-        print list[i],
+        print(list[i],)
 
 PrintListChinese(fileTrainSeg[10])
 
