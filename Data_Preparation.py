@@ -4,7 +4,7 @@ import gensim
 from gensim.models import word2vec
 
 fileTrainRead = []
-with open('C:\\Users\\wanxuanl\\Documents\\MasterDissertation\\corpus.txt') as fileTrainRaw:
+with open('/home/wanxuanl/corpus.txt') as fileTrainRaw:
     for line in fileTrainRaw:
         line = unicode(line, "utf8", errors="ignore")
         fileTrainRead.append(line)
