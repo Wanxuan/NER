@@ -6,7 +6,6 @@ from gensim.models import word2vec
 fileTrainRead = []
 with open('/home/wanxuanl/corpus.txt') as fileTrainRaw:
     for line in fileTrainRaw:
-        line = unicode(line, "utf8", errors="ignore")
         fileTrainRead.append(line)
 
 # Word Tokenize
